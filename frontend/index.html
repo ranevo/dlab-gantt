@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>프로젝트 일정 관리</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="app-title">
+        <h1>DLab Gantt 프로젝트 대시보드</h1>
+        <p>
+          프로젝트 구조와 Gantt 차트를 한 눈에 확인하고, 각 프로젝트별로 해야 할
+          일들을 관리할 수 있습니다.
+        </p>
+      </div>
+      <div class="app-controls">
+        <div class="app-legend">
+          <h2>범례</h2>
+          <ul>
+            <li><span class="legend-bar planned"></span> 계획</li>
+            <li><span class="legend-bar in-progress"></span> 진행 중</li>
+            <li><span class="legend-bar done"></span> 완료</li>
+          </ul>
+        </div>
+        <button id="download-data" class="download-button" type="button">
+          데이터 다운로드
+        </button>
+      </div>
+    </header>
+    <main class="app-main">
+      <section class="panel project-panel">
+        <h2>프로젝트 트리</h2>
+        <p class="panel-description">
+          트리에서 프로젝트를 선택하면 관련 TODO 리스트를 확인할 수 있습니다.
+        </p>
+        <div id="project-tree" class="tree"></div>
+        <div class="todo-panel">
+          <div class="todo-header">
+            <h2 id="todo-title">TODO</h2>
+            <div id="todo-progress" class="todo-progress"></div>
+          </div>
+          <ul id="todo-list" class="todo-list"></ul>
+          <div
+            id="todo-feedback"
+            class="todo-feedback"
+            role="status"
+            aria-live="polite"
+          ></div>
+        </div>
+      </section>
+      <section class="panel gantt-panel">
+        <h2>Gantt 차트</h2>
+        <div id="gantt-chart" class="gantt"></div>
+      </section>
+    </main>
+    <footer class="app-footer">
+      <small>
+        © 2024 DLab. 프로젝트 일정과 업무 관리를 위한 데모 인터페이스입니다.
+      </small>
+    </footer>
+    <script src="main.js" defer></script>
+  </body>
+</html>
