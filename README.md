@@ -1,2 +1,2 @@
-# dlab-gantt
-dlab project manager
+# Bridge Module Firmware
+LG ThinQ & Homey
